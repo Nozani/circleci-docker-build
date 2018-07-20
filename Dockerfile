@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM mhart/alpine-node:8.11
 RUN apk -v --update add \
   python \
   py-pip \
@@ -10,6 +10,7 @@ RUN apk -v --update add \
   ca-certificates \
   git \
   docker \
+  openrc \
   && \
   pip install --upgrade awscli && \
   apk -v --purge del py-pip && \
