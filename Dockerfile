@@ -11,7 +11,9 @@ RUN apk -v --update add \
   git \
   docker \
   openrc \
+  go \
   && \
   pip install --upgrade awscli && \
   apk -v --purge del py-pip && \
+  go get -u github.com/tcnksm/ghr && \
   rm /var/cache/apk/*
